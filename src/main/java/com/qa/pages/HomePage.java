@@ -16,21 +16,21 @@ public class HomePage extends TestBase{
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(xpath="//td[contains(text(),'User: Tushar Tone ')]")
+	@FindBy(xpath="//td[contains(text(),'User: Tushar Tone')]")
 	@CacheLookup
 	WebElement usernameLable;
 	
-	@FindBy(xpath = "//a[contains(text(),'Contacts')]")
+	@FindBy(xpath="//a[contains(text(),'Contacts')]")
 	WebElement contactsLink;
 	
-	@FindBy(xpath = "//a[contains(text(),'New Contact')]")
+	@FindBy(xpath="//a[contains(text(),'New Contact')]")
 	WebElement newContactLink;
 	
 
-	@FindBy(xpath = "//a[contains(text(),'Deals')]")
+	@FindBy(xpath="//a[contains(text(),'Deals')]")
 	WebElement dealsLink;
 
-	@FindBy(xpath = "//a[contains(text(),'Tasks')]")
+	@FindBy(xpath="//a[contains(text(),'Tasks')]")
 	WebElement tasksLink;
 	
 	public String verifyHomePageTitle(){
@@ -39,6 +39,7 @@ public class HomePage extends TestBase{
 	
 	
 	public boolean verifyCorrectUserName(){
+		
 		return usernameLable.isDisplayed();
 	}
 	
@@ -48,6 +49,7 @@ public class HomePage extends TestBase{
 //	}
 //	
 	public void clickOnNewContactLink(){
+		
 		Actions action = new Actions(driver);
 		action.moveToElement(contactsLink).build().perform();
 		newContactLink.click();
